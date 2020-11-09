@@ -1,0 +1,137 @@
+<!DOCTPYE html>
+<html>
+	<head>
+			<title>Calculator</title>
+			<style>
+			
+			/* container for calculator */
+			
+			#calc-contain {
+				position: relative;
+				width: 300px;
+				border: 2px solid black;
+				border-radius: 4px;
+			}
+			
+			/* styling for buttons */
+			
+			input[type=button] {
+				background: lightGray;
+				width: 20%;
+				font-size: 20px;
+				font-weight: 900;
+				margin: 2%;
+				border-radius: 4px;
+			}
+			
+			/* styling for textbox */
+			
+			input[type=text]{
+			position: relative;
+			display: block;
+			width: 90%;
+			margin: 5px auto;
+			font-size: 20px;
+			}
+			</style>
+	</head>
+	
+	<body>
+		<div id="calc-contain">
+			<form name="calculator">
+			<input type="text" name="answer" />
+			<br />
+			<!-- makes our first button, += means to append the value -->
+			<input type="button" value=" 1 " onclick="calculator.answer.value += '1'" /><!-- go into our calculator, then into the answer box, then append a 1. -->
+			<input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+			<input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+			<input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+			<br />
+			
+			<input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+			<input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+			<input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+			<input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+			<br />
+			
+			<input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+			<input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+			<input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+			<input type="button" value=" x " onclick="calculator.answer.value += '*'" />
+			<br />
+			
+			<input type="button" value=" c " onclick="calculator.answer.value = ''" /> <!-- notice here we are not using += to append, we are just using = to get the actual value -->
+			<input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+			<input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" /> <!-- notice here we are not using += to append, we are just using = to get the actual value, also notice eval function -->
+			<input type="button" value=" / " onclick="calculator.answer.value += '/'" />
+			<br />
+			
+			</form>
+		</div>
+	</body>
+	
+	<script>
+	// event listeners to make the program work with numpad.
+	
+	document.addEventListener('keydown', function(event) {
+	
+	if(event.keyCode == 96) {
+     calculator.answer.value += '0';
+    }
+	
+    else if(event.keyCode == 97) {
+        calculator.answer.value += '1';
+    }
+    else if(event.keyCode == 98) {
+        calculator.answer.value += '2';
+    }
+	    else if(event.keyCode == 99) {
+        calculator.answer.value += '3';
+    }
+	    else if(event.keyCode == 100) {
+        calculator.answer.value += '4';
+    }
+	    else if(event.keyCode == 101) {
+        calculator.answer.value += '5';
+    }
+	    else if(event.keyCode == 102) {
+        calculator.answer.value += '6';
+    }
+	    else if(event.keyCode == 103) {
+        calculator.answer.value += '7';
+    }
+	
+	    else if(event.keyCode == 104) {
+        calculator.answer.value += '8';
+    }
+	
+	    else if(event.keyCode == 105) {
+        calculator.answer.value += '9';
+    }
+	
+	    else if(event.keyCode == 106) {
+        calculator.answer.value += '*';
+    }
+	
+	    else if(event.keyCode == 111) {
+        calculator.answer.value += '/';
+    }
+	
+		else if(event.keyCode == 109) {
+        calculator.answer.value += '-';
+    }
+	
+		else if(event.keyCode == 107) {
+        calculator.answer.value += '+';
+    }
+	
+	    else if(event.keyCode == 13) {
+       calculator.answer.value = eval(calculator.answer.value);
+    }
+	
+		    else if(event.keyCode == 27) {
+       calculator.answer.value = '';
+    }
+});
+	</script>
+</html>
