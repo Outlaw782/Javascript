@@ -1,0 +1,12 @@
+git init - Initialize a local file as a github repo. You need to do this to run git comands on it.
+git add <file> - Add Files To Index (files to be committed)
+git add *.html - Adds all HTML files to Index (files to be committed)
+git add . - Adds all files to Index (files to be comitted)
+git rm <file> - Removes Files to Index (Removes files to be committed)
+git rm . - Removes all files from Index
+
+git status - Check Status of Working Tree
+git commit - Commit Changes In Index
+git push - Push to Remove Repo
+git pull - Pull latest from remove repo
+git clone - clones repo into your current folder
