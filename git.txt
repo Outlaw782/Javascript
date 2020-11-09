@@ -7,6 +7,9 @@ git rm . - Removes all files from Index
 
 git status - Check Status of Working Tree
 git commit - Commit Changes In Index
+git commit -m 'comment here'
 git push - Push to Remove Repo
 git pull - Pull latest from remove repo
 git clone - clones repo into your current folder
+
+stuck with flashing cursor? ctrl+c
