@@ -11,5 +11,8 @@ git commit -m 'comment here'
 git push - Push to Remove Repo
 git pull - Pull latest from remove repo
 git clone - clones repo into your current folder
+git branch <name>- adds a new branch to commit changes to other than master 
 
 stuck with flashing cursor? ctrl+c
+
+.gitignore, you can include files in in here and it will ignore pushing these files to the server.
