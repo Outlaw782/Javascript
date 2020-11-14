@@ -1,4 +1,5 @@
 /*
+https://classroom.udacity.com/me
 Recall that arrays can store many different types of data, not just strings!
 Below, create an array called `mixedArray` that contains:
 
