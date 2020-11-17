@@ -60,7 +60,7 @@ console.log(albumSalesStrings);
  *   - Do not alter any of the musicData content
  */
 
-const musicData = [
+const musicData2 = [
     { artist: 'Adele', name: '25', sales: 1731000 },
     { artist: 'Drake', name: 'Views', sales: 1608000 },
     { artist: 'Beyonce', name: 'Lemonade', sales: 1554000 },
@@ -74,8 +74,29 @@ const musicData = [
     { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }
 ];
 
-const results = musicData.filter(function(album){ return album.name.length >= 10 && album.name.length < 25; });;
-
+const results = musicData2.filter(function(album){
+     return album.name.length >= 10 && album.name.length < 25; });;
 console.log(results);
 
 
+/*
+
+Declare a function named `expandArray()` that:
+
+* Takes no arguments
+* Contains a single local variable, `myArray`, which points to [1, 1, 1]
+* Returns an anonymous function that directly modifies `myArray` by
+  appending another `1` into it
+* The returned function then returns the value of `myArray`
+
+*/
+
+function expandArray() {
+ let myArray = [1, 1, 1];
+  return function() {
+    myArray.push(1);
+    return myArray
+  }
+}
+
+expandArray()
