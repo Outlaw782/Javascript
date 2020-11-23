@@ -39,3 +39,6 @@ const driver = {
 sufficient (no need to save it to a variable))))).
   */
  driver.displayName.bind(car);
+ console.log(driver.name);
+ console.log(car.name);
+ driver.displayName(car);
